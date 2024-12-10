@@ -5,11 +5,6 @@ import plotly.graph_objs as go
 import pandas as pd
 import dash_bootstrap_components as dbc
 
-import streamlit as st
-
-st.title("微型保險財務敏感度分析")
-st.write("歡迎使用 Streamlit 應用程式！")
-
 # 初始化 Dash 應用，使用 Bootstrap 主題
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 
