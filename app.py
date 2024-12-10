@@ -228,5 +228,9 @@ def update_graphs(insurance_liability_ratio, operating_expense_ratio, growth_rat
     return net_income_fig, net_profit_rate_fig, insured_people_fig
 
 # 運行應用
+
+import os  # 添加這一行以使用環境變數
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    # app.run_server(debug=True)
+    port = int(os.environ.get("PORT", 8050))  # Render 提供的端口，默認為 8050
+    app.run_server(host="0.0.0.0", port=port, debug=True)  # 綁定到 0.0.0.0 和指定端口
